@@ -1,0 +1,1567 @@
+{
+	"info": {
+		"_postman_id": "57e45586-23d9-4da6-89da-32a1e01bd7b6",
+		"name": "OCTO API Specification",
+		"description": "OCTO (Open Connectivity for Tours, Activities, and Attractions) is an open standard API specification for the in-destination experiences sector of the travel industry. The standard defines agreed-upon schemas, endpoints, and capabilities commonly needed when connecting platforms, resellers, OTAs, and other technologies in tours, activities, and attractions. \n\nOCTO is open source. Available to anyone who wants to use it. You do not need to be a member to use this specification in your business.\n\nContact Support:\n Name: OCTO Standards NP Inc.\n Email: sayhello@octo.travel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25119365"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products"
+							]
+						},
+						"description": "Fetch the list of products."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/products/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "<string>",
+									"description": "(Required) The product id"
+								}
+							]
+						},
+						"description": "Fetch the product for the given id."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/products/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<string>",
+											"description": "(Required) The product id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<string>\",\n  \"internalName\": \"<string>\",\n  \"reference\": \"<null,string>\",\n  \"locale\": \"<string>\",\n  \"allowFreesale\": \"<boolean>\",\n  \"instantConfirmation\": \"<boolean>\",\n  \"instantDelivery\": \"<boolean>\",\n  \"availabilityRequired\": \"<boolean>\",\n  \"availabilityType\": \"<string>\",\n  \"deliveryFormats\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"redemptionMethod\": \"<string>\",\n  \"options\": [\n    {\n      \"id\": \"<string>\",\n      \"default\": \"<boolean>\",\n      \"internalName\": \"<string>\",\n      \"reference\": \"<null,string>\",\n      \"availabilityLocalStartTimes\": [\n        \"00:00\",\n        \"00:00\"\n      ],\n      \"cancellationCutoff\": \"<string>\",\n      \"cancellationCutoffAmount\": \"<integer>\",\n      \"cancellationCutoffUnit\": \"<string>\",\n      \"requiredContactFields\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"restrictions\": {\n        \"minUnits\": \"<integer,null>\",\n        \"maxUnits\": \"<integer,null>\"\n      },\n      \"units\": [\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<string>\",\n      \"default\": \"<boolean>\",\n      \"internalName\": \"<string>\",\n      \"reference\": \"<null,string>\",\n      \"availabilityLocalStartTimes\": [\n        \"00:00\",\n        \"00:00\"\n      ],\n      \"cancellationCutoff\": \"<string>\",\n      \"cancellationCutoffAmount\": \"<integer>\",\n      \"cancellationCutoffUnit\": \"<string>\",\n      \"requiredContactFields\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"restrictions\": {\n        \"minUnits\": \"<integer,null>\",\n        \"maxUnits\": \"<integer,null>\"\n      },\n      \"units\": [\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        }\n      ]\n    }\n  ],\n  \"timeZone\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "availability",
+			"item": [
+				{
+					"name": "Availability Check",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"localDateStart\": \"<date>\",\n  \"localDateEnd\": \"<date>\",\n  \"availabilityIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"units\": [\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/availability",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"availability"
+							]
+						},
+						"description": "This endpoint is slightly slower as it will return an object for each individual departure time (or day). You have to perform this step to retrieve an `availabilityId` in order to confirm a sale, so if you just want to use this endpoint and skip the calendar endpoint then that's perfectly ok.\n\nYou must pass in one of the following combinations of parameters for this endpoint:\n- `localDate`\n- `localeDateStart` and `localDateEnd`\n- `availabilityIds`"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"localDateStart\": \"<date>\",\n  \"localDateEnd\": \"<date>\",\n  \"availabilityIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"units\": [\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/availability",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"availability"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<dateTime>\",\n    \"localDateTimeEnd\": \"<dateTime>\",\n    \"allDay\": \"<boolean>\",\n    \"available\": \"<boolean>\",\n    \"status\": \"<string>\",\n    \"vacancies\": \"<integer,null>\",\n    \"capacity\": \"<integer,null>\",\n    \"maxUnits\": \"<integer,null>\",\n    \"utcCutoffAt\": \"<string>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<dateTime>\",\n    \"localDateTimeEnd\": \"<dateTime>\",\n    \"allDay\": \"<boolean>\",\n    \"available\": \"<boolean>\",\n    \"status\": \"<string>\",\n    \"vacancies\": \"<integer,null>\",\n    \"capacity\": \"<integer,null>\",\n    \"maxUnits\": \"<integer,null>\",\n    \"utcCutoffAt\": \"<string>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  }\n]"
+						},
+						{
+							"name": "Example response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"localDateStart\": \"<date>\",\n  \"localDateEnd\": \"<date>\",\n  \"availabilityIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"units\": [\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/availability",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"availability"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Availability Calendar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"localDateStart\": \"<string>\",\n  \"localDateEnd\": \"<string>\",\n  \"units\": [\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/availability/calendar",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"availability",
+								"calendar"
+							]
+						},
+						"description": "This endpoint is highly optimised and will return a single object per day. It's designed to be queried for large date ranges and the result is used to populate an availability calendar.\n\nWhen the end user selects an open date you can call on `/availability` endpoint to get the `availabilityId` to create the booking."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"localDateStart\": \"<string>\",\n  \"localDateEnd\": \"<string>\",\n  \"units\": [\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/availability/calendar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"availability",
+										"calendar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"localDate\": \"<date>\",\n    \"available\": \"<boolean>\",\n    \"status\": \"<string>\",\n    \"vacancies\": \"<integer,null>\",\n    \"capacity\": \"<integer,null>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"localDate\": \"<date>\",\n    \"available\": \"<boolean>\",\n    \"status\": \"<string>\",\n    \"vacancies\": \"<integer,null>\",\n    \"capacity\": \"<integer,null>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  }\n]"
+						},
+						{
+							"name": "Example response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"localDateStart\": \"<string>\",\n  \"localDateEnd\": \"<string>\",\n  \"units\": [\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"quantity\": \"<integer>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/availability/calendar",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"availability",
+										"calendar"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "{uuid}",
+					"item": [
+						{
+							"name": "Get Booking",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:uuid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":uuid"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "<string>",
+											"description": "(Required) The UUID of the booking"
+										}
+									]
+								},
+								"description": "Fetch the status of an existing booking."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"uuid\": \"<uuid>\",\n  \"testMode\": \"<boolean>\",\n  \"resellerReference\": \"<string,null>\",\n  \"supplierReference\": \"<string,null>\",\n  \"status\": \"<string>\",\n  \"utcCreatedAt\": \"<string>\",\n  \"utcUpdatedAt\": \"<string,null>\",\n  \"utcExpiresAt\": \"<string,null>\",\n  \"utcRedeemedAt\": \"<string,null>\",\n  \"utcConfirmedAt\": \"<string,null>\",\n  \"productId\": \"<string>\",\n  \"product\": {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  \"optionId\": \"<string>\",\n  \"option\": {\n    \"id\": \"<string>\",\n    \"default\": \"<boolean>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"availabilityLocalStartTimes\": [\n      \"00:00\",\n      \"00:00\"\n    ],\n    \"cancellationCutoff\": \"<string>\",\n    \"cancellationCutoffAmount\": \"<integer>\",\n    \"cancellationCutoffUnit\": \"<string>\",\n    \"requiredContactFields\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"restrictions\": {\n      \"minUnits\": \"<integer,null>\",\n      \"maxUnits\": \"<integer,null>\"\n    },\n    \"units\": [\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      }\n    ]\n  },\n  \"cancellable\": \"<boolean>\",\n  \"cancellation\": {\n    \"refund\": \"<string>\",\n    \"reason\": \"<null,string>\",\n    \"utcCancelledAt\": \"<string>\"\n  },\n  \"freesale\": \"<boolean>\",\n  \"availabilityId\": \"<string>\",\n  \"availability\": {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<string>\",\n    \"localDateTimeEnd\": \"<string>\",\n    \"allDay\": \"<boolean>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  \"contact\": {\n    \"fullName\": \"<null,string>\",\n    \"firstName\": \"<null,string>\",\n    \"lastName\": \"<null,string>\",\n    \"emailAddress\": \"<null,string-email>\",\n    \"phoneNumber\": \"<null,string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<null,string>\",\n    \"country\": \"<null,string>\",\n    \"notes\": \"<null,string>\"\n  },\n  \"notes\": \"<string,null>\",\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"unitItems\": [\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    },\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    }\n  ],\n  \"voucher\": {\n    \"redemptionMethod\": \"<string>\",\n    \"utcRedeemedAt\": \"<null,string>\",\n    \"deliveryOptions\": [\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      },\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      }\n    ]\n  }\n}"
+								},
+								{
+									"name": "Example response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Booking Cancellation",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"reason\": \"<string>\",\n  \"force\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:uuid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":uuid"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "<string>",
+											"description": "(Required) The UUID of the booking"
+										}
+									]
+								},
+								"description": "For cancelling bookings. You can only cancel a booking if `booking.cancellable` is `TRUE`, and is within the booking cancellation cut-off window."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Required field on all DELETE requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reason\": \"<string>\",\n  \"force\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"uuid\": \"<uuid>\",\n  \"testMode\": \"<boolean>\",\n  \"resellerReference\": \"<string,null>\",\n  \"supplierReference\": \"<string,null>\",\n  \"status\": \"<string>\",\n  \"utcCreatedAt\": \"<string>\",\n  \"utcUpdatedAt\": \"<string,null>\",\n  \"utcExpiresAt\": \"<string,null>\",\n  \"utcRedeemedAt\": \"<string,null>\",\n  \"utcConfirmedAt\": \"<string,null>\",\n  \"productId\": \"<string>\",\n  \"product\": {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  \"optionId\": \"<string>\",\n  \"option\": {\n    \"id\": \"<string>\",\n    \"default\": \"<boolean>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"availabilityLocalStartTimes\": [\n      \"00:00\",\n      \"00:00\"\n    ],\n    \"cancellationCutoff\": \"<string>\",\n    \"cancellationCutoffAmount\": \"<integer>\",\n    \"cancellationCutoffUnit\": \"<string>\",\n    \"requiredContactFields\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"restrictions\": {\n      \"minUnits\": \"<integer,null>\",\n      \"maxUnits\": \"<integer,null>\"\n    },\n    \"units\": [\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      }\n    ]\n  },\n  \"cancellable\": \"<boolean>\",\n  \"cancellation\": {\n    \"refund\": \"<string>\",\n    \"reason\": \"<null,string>\",\n    \"utcCancelledAt\": \"<string>\"\n  },\n  \"freesale\": \"<boolean>\",\n  \"availabilityId\": \"<string>\",\n  \"availability\": {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<string>\",\n    \"localDateTimeEnd\": \"<string>\",\n    \"allDay\": \"<boolean>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  \"contact\": {\n    \"fullName\": \"<null,string>\",\n    \"firstName\": \"<null,string>\",\n    \"lastName\": \"<null,string>\",\n    \"emailAddress\": \"<null,string-email>\",\n    \"phoneNumber\": \"<null,string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<null,string>\",\n    \"country\": \"<null,string>\",\n    \"notes\": \"<null,string>\"\n  },\n  \"notes\": \"<string,null>\",\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"unitItems\": [\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    },\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    }\n  ],\n  \"voucher\": {\n    \"redemptionMethod\": \"<string>\",\n    \"utcRedeemedAt\": \"<null,string>\",\n    \"deliveryOptions\": [\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      },\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      }\n    ]\n  }\n}"
+								},
+								{
+									"name": "Example response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Required field on all DELETE requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reason\": \"<string>\",\n  \"force\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"uuid\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Booking Update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"resellerReference\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"expirationMinutes\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"emailReceipt\": \"<boolean>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<email>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<email>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    }\n  ],\n  \"contact\": {\n    \"fullName\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"emailAddress\": \"<email>\",\n    \"phoneNumber\": \"<string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<string>\",\n    \"country\": \"<string>\",\n    \"notes\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:uuid",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":uuid"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "<string>",
+											"description": "(Required) The UUID of the booking"
+										}
+									]
+								},
+								"description": "Updates a booking before and after it has been confirmed as long as it hasn''t been redeemed or within the cancellation cutoff window. To know if the booking can be updated check the booking''s `cancellable` field. If the booking can be cancelled, it can also be updated. It''s generally preferred to update a booking rather than cancelling it and rebooking."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Required field on all PATCH requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"resellerReference\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"expirationMinutes\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"emailReceipt\": \"<boolean>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<email>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<email>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    }\n  ],\n  \"contact\": {\n    \"fullName\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"emailAddress\": \"<email>\",\n    \"phoneNumber\": \"<string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<string>\",\n    \"country\": \"<string>\",\n    \"notes\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"uuid\": \"<uuid>\",\n  \"testMode\": \"<boolean>\",\n  \"resellerReference\": \"<string,null>\",\n  \"supplierReference\": \"<string,null>\",\n  \"status\": \"<string>\",\n  \"utcCreatedAt\": \"<string>\",\n  \"utcUpdatedAt\": \"<string,null>\",\n  \"utcExpiresAt\": \"<string,null>\",\n  \"utcRedeemedAt\": \"<string,null>\",\n  \"utcConfirmedAt\": \"<string,null>\",\n  \"productId\": \"<string>\",\n  \"product\": {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  \"optionId\": \"<string>\",\n  \"option\": {\n    \"id\": \"<string>\",\n    \"default\": \"<boolean>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"availabilityLocalStartTimes\": [\n      \"00:00\",\n      \"00:00\"\n    ],\n    \"cancellationCutoff\": \"<string>\",\n    \"cancellationCutoffAmount\": \"<integer>\",\n    \"cancellationCutoffUnit\": \"<string>\",\n    \"requiredContactFields\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"restrictions\": {\n      \"minUnits\": \"<integer,null>\",\n      \"maxUnits\": \"<integer,null>\"\n    },\n    \"units\": [\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      }\n    ]\n  },\n  \"cancellable\": \"<boolean>\",\n  \"cancellation\": {\n    \"refund\": \"<string>\",\n    \"reason\": \"<null,string>\",\n    \"utcCancelledAt\": \"<string>\"\n  },\n  \"freesale\": \"<boolean>\",\n  \"availabilityId\": \"<string>\",\n  \"availability\": {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<string>\",\n    \"localDateTimeEnd\": \"<string>\",\n    \"allDay\": \"<boolean>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  \"contact\": {\n    \"fullName\": \"<null,string>\",\n    \"firstName\": \"<null,string>\",\n    \"lastName\": \"<null,string>\",\n    \"emailAddress\": \"<null,string-email>\",\n    \"phoneNumber\": \"<null,string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<null,string>\",\n    \"country\": \"<null,string>\",\n    \"notes\": \"<null,string>\"\n  },\n  \"notes\": \"<string,null>\",\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"unitItems\": [\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    },\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    }\n  ],\n  \"voucher\": {\n    \"redemptionMethod\": \"<string>\",\n    \"utcRedeemedAt\": \"<null,string>\",\n    \"deliveryOptions\": [\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      },\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      }\n    ]\n  }\n}"
+								},
+								{
+									"name": "Example response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Required field on all PATCH requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"resellerReference\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"expirationMinutes\": \"<string>\",\n  \"notes\": \"<string>\",\n  \"emailReceipt\": \"<boolean>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<email>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<email>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    }\n  ],\n  \"contact\": {\n    \"fullName\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"emailAddress\": \"<email>\",\n    \"phoneNumber\": \"<string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<string>\",\n    \"country\": \"<string>\",\n    \"notes\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"unitId\": \"<string>\",\n  \"uuid\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Booking Confirmation",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"contact\": {\n    \"fullName\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"emailAddress\": \"<email>\",\n    \"phoneNumber\": \"<string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<string>\",\n    \"country\": \"<string>\",\n    \"notes\": \"<string>\"\n  },\n  \"emailReceipt\": \"<boolean>\",\n  \"resellerReference\": \"<string>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:uuid/confirm",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":uuid",
+										"confirm"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "<string>",
+											"description": "(Required) The UUID of the booking"
+										}
+									]
+								},
+								"description": "This endpoint confirms the booking so it's ready to be used."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											},
+											{
+												"description": "Required field on all POST requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"contact\": {\n    \"fullName\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"emailAddress\": \"<email>\",\n    \"phoneNumber\": \"<string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<string>\",\n    \"country\": \"<string>\",\n    \"notes\": \"<string>\"\n  },\n  \"emailReceipt\": \"<boolean>\",\n  \"resellerReference\": \"<string>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid/confirm",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid",
+												"confirm"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"uuid\": \"<uuid>\",\n  \"testMode\": \"<boolean>\",\n  \"resellerReference\": \"<string,null>\",\n  \"supplierReference\": \"<string,null>\",\n  \"status\": \"<string>\",\n  \"utcCreatedAt\": \"<string>\",\n  \"utcUpdatedAt\": \"<string,null>\",\n  \"utcExpiresAt\": \"<string,null>\",\n  \"utcRedeemedAt\": \"<string,null>\",\n  \"utcConfirmedAt\": \"<string,null>\",\n  \"productId\": \"<string>\",\n  \"product\": {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  \"optionId\": \"<string>\",\n  \"option\": {\n    \"id\": \"<string>\",\n    \"default\": \"<boolean>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"availabilityLocalStartTimes\": [\n      \"00:00\",\n      \"00:00\"\n    ],\n    \"cancellationCutoff\": \"<string>\",\n    \"cancellationCutoffAmount\": \"<integer>\",\n    \"cancellationCutoffUnit\": \"<string>\",\n    \"requiredContactFields\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"restrictions\": {\n      \"minUnits\": \"<integer,null>\",\n      \"maxUnits\": \"<integer,null>\"\n    },\n    \"units\": [\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      }\n    ]\n  },\n  \"cancellable\": \"<boolean>\",\n  \"cancellation\": {\n    \"refund\": \"<string>\",\n    \"reason\": \"<null,string>\",\n    \"utcCancelledAt\": \"<string>\"\n  },\n  \"freesale\": \"<boolean>\",\n  \"availabilityId\": \"<string>\",\n  \"availability\": {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<string>\",\n    \"localDateTimeEnd\": \"<string>\",\n    \"allDay\": \"<boolean>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  \"contact\": {\n    \"fullName\": \"<null,string>\",\n    \"firstName\": \"<null,string>\",\n    \"lastName\": \"<null,string>\",\n    \"emailAddress\": \"<null,string-email>\",\n    \"phoneNumber\": \"<null,string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<null,string>\",\n    \"country\": \"<null,string>\",\n    \"notes\": \"<null,string>\"\n  },\n  \"notes\": \"<string,null>\",\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"unitItems\": [\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    },\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    }\n  ],\n  \"voucher\": {\n    \"redemptionMethod\": \"<string>\",\n    \"utcRedeemedAt\": \"<null,string>\",\n    \"deliveryOptions\": [\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      },\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      }\n    ]\n  }\n}"
+								},
+								{
+									"name": "Example response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											},
+											{
+												"description": "Required field on all POST requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"contact\": {\n    \"fullName\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"emailAddress\": \"<email>\",\n    \"phoneNumber\": \"<string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<string>\",\n    \"country\": \"<string>\",\n    \"notes\": \"<string>\"\n  },\n  \"emailReceipt\": \"<boolean>\",\n  \"resellerReference\": \"<string>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string>\",\n      \"contact\": {\n        \"fullName\": \"<string>\",\n        \"firstName\": \"<string>\",\n        \"lastName\": \"<string>\",\n        \"emailAddress\": \"<string>\",\n        \"phoneNumber\": \"<string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<string>\",\n        \"country\": \"<string>\",\n        \"notes\": \"<string>\"\n      }\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid/confirm",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid",
+												"confirm"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"unitId\": \"<string>\",\n  \"uuid\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Extend Reservation",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"expirationMinutes\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings/:uuid/extend",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings",
+										":uuid",
+										"extend"
+									],
+									"variable": [
+										{
+											"key": "uuid",
+											"value": "<string>",
+											"description": "(Required) The UUID of the booking"
+										}
+									]
+								},
+								"description": "Use this endpoint to hold the availability for a booking longer if the status is `ON_HOLD`."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											},
+											{
+												"description": "Required field on all POST requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"expirationMinutes\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid/extend",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid",
+												"extend"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"uuid\": \"<uuid>\",\n  \"testMode\": \"<boolean>\",\n  \"resellerReference\": \"<string,null>\",\n  \"supplierReference\": \"<string,null>\",\n  \"status\": \"<string>\",\n  \"utcCreatedAt\": \"<string>\",\n  \"utcUpdatedAt\": \"<string,null>\",\n  \"utcExpiresAt\": \"<string,null>\",\n  \"utcRedeemedAt\": \"<string,null>\",\n  \"utcConfirmedAt\": \"<string,null>\",\n  \"productId\": \"<string>\",\n  \"product\": {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  \"optionId\": \"<string>\",\n  \"option\": {\n    \"id\": \"<string>\",\n    \"default\": \"<boolean>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"availabilityLocalStartTimes\": [\n      \"00:00\",\n      \"00:00\"\n    ],\n    \"cancellationCutoff\": \"<string>\",\n    \"cancellationCutoffAmount\": \"<integer>\",\n    \"cancellationCutoffUnit\": \"<string>\",\n    \"requiredContactFields\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"restrictions\": {\n      \"minUnits\": \"<integer,null>\",\n      \"maxUnits\": \"<integer,null>\"\n    },\n    \"units\": [\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      }\n    ]\n  },\n  \"cancellable\": \"<boolean>\",\n  \"cancellation\": {\n    \"refund\": \"<string>\",\n    \"reason\": \"<null,string>\",\n    \"utcCancelledAt\": \"<string>\"\n  },\n  \"freesale\": \"<boolean>\",\n  \"availabilityId\": \"<string>\",\n  \"availability\": {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<string>\",\n    \"localDateTimeEnd\": \"<string>\",\n    \"allDay\": \"<boolean>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  \"contact\": {\n    \"fullName\": \"<null,string>\",\n    \"firstName\": \"<null,string>\",\n    \"lastName\": \"<null,string>\",\n    \"emailAddress\": \"<null,string-email>\",\n    \"phoneNumber\": \"<null,string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<null,string>\",\n    \"country\": \"<null,string>\",\n    \"notes\": \"<null,string>\"\n  },\n  \"notes\": \"<string,null>\",\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"unitItems\": [\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    },\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    }\n  ],\n  \"voucher\": {\n    \"redemptionMethod\": \"<string>\",\n    \"utcRedeemedAt\": \"<null,string>\",\n    \"deliveryOptions\": [\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      },\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      }\n    ]\n  }\n}"
+								},
+								{
+									"name": "Example response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											},
+											{
+												"description": "Required field on all POST requests",
+												"key": "Content-Type",
+												"value": "<string>"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"expirationMinutes\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/bookings/:uuid/extend",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"bookings",
+												":uuid",
+												"extend"
+											],
+											"variable": [
+												{
+													"key": "uuid",
+													"value": "<string>",
+													"description": "(Required) The UUID of the booking"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"uuid\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Booking Reservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\"\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\"\n    }\n  ],\n  \"uuid\": \"<uuid>\",\n  \"expirationMinutes\": \"<integer>\",\n  \"notes\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/bookings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookings"
+							]
+						},
+						"description": "Reserving availability when making a booking. The steps to make a reservation are:\n\n1. **Check Availability**: Check the availability on the [/availability](docs/octo/branches/main/5b08f5f75e75d-availability-check) endpoint to retrieve an `availabilityId`\n2. **Booking Reservation** (this step): Create a booking that reserves the availability while you collect payment and contact information from the customer. The booking will remain with status `ON_HOLD` until the booking is confirmed or the reservation hold expires.\n\nThe availability for the booking is held for the amount of time equal to the`expirationMinutes` parameter (if provided), up to an internal limit set by either the supplier or the OCTo provider. The `utc_expires_at` parameter in the response object will indicate when a reservtion will expire. A reservation can be extended by calling the [/bookings/{uuid}/extend](docs/octo/branches/main/2c7924ab9128f-extend-reservation) endpoint.\n\nA reserved booking can be confirmed after the customer finalizes their choice on the [/bookings/{uuid}/confirm](docs/octo/branches/main/614d1613b2d70-booking-confirmation) endpoint provided the reservation had not expired.\n"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Required field on all POST requests",
+										"key": "Content-Type",
+										"value": "<string>"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\"\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\"\n    }\n  ],\n  \"uuid\": \"<uuid>\",\n  \"expirationMinutes\": \"<integer>\",\n  \"notes\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<string>\",\n  \"uuid\": \"<uuid>\",\n  \"testMode\": \"<boolean>\",\n  \"resellerReference\": \"<string,null>\",\n  \"supplierReference\": \"<string,null>\",\n  \"status\": \"<string>\",\n  \"utcCreatedAt\": \"<string>\",\n  \"utcUpdatedAt\": \"<string,null>\",\n  \"utcExpiresAt\": \"<string,null>\",\n  \"utcRedeemedAt\": \"<string,null>\",\n  \"utcConfirmedAt\": \"<string,null>\",\n  \"productId\": \"<string>\",\n  \"product\": {\n    \"id\": \"<string>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"locale\": \"<string>\",\n    \"allowFreesale\": \"<boolean>\",\n    \"instantConfirmation\": \"<boolean>\",\n    \"instantDelivery\": \"<boolean>\",\n    \"availabilityRequired\": \"<boolean>\",\n    \"availabilityType\": \"<string>\",\n    \"deliveryFormats\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"redemptionMethod\": \"<string>\",\n    \"options\": [\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      },\n      {\n        \"id\": \"<string>\",\n        \"default\": \"<boolean>\",\n        \"internalName\": \"<string>\",\n        \"reference\": \"<null,string>\",\n        \"availabilityLocalStartTimes\": [\n          \"00:00\",\n          \"00:00\"\n        ],\n        \"cancellationCutoff\": \"<string>\",\n        \"cancellationCutoffAmount\": \"<integer>\",\n        \"cancellationCutoffUnit\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minUnits\": \"<integer,null>\",\n          \"maxUnits\": \"<integer,null>\"\n        },\n        \"units\": [\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          },\n          {\n            \"id\": \"<string>\",\n            \"internalName\": \"<string>\",\n            \"type\": \"<string>\",\n            \"requiredContactFields\": [\n              \"<string>\",\n              \"<string>\"\n            ],\n            \"restrictions\": {\n              \"minAge\": \"<integer>\",\n              \"maxAge\": \"<integer>\",\n              \"idRequired\": \"<boolean>\",\n              \"minQuantity\": \"<integer,null>\",\n              \"maxQuantity\": \"<null,integer>\",\n              \"paxCount\": \"<integer>\",\n              \"accompaniedBy\": [\n                \"<string>\",\n                \"<string>\"\n              ]\n            },\n            \"reference\": \"<null,string>\"\n          }\n        ]\n      }\n    ],\n    \"timeZone\": \"<string>\"\n  },\n  \"optionId\": \"<string>\",\n  \"option\": {\n    \"id\": \"<string>\",\n    \"default\": \"<boolean>\",\n    \"internalName\": \"<string>\",\n    \"reference\": \"<null,string>\",\n    \"availabilityLocalStartTimes\": [\n      \"00:00\",\n      \"00:00\"\n    ],\n    \"cancellationCutoff\": \"<string>\",\n    \"cancellationCutoffAmount\": \"<integer>\",\n    \"cancellationCutoffUnit\": \"<string>\",\n    \"requiredContactFields\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"restrictions\": {\n      \"minUnits\": \"<integer,null>\",\n      \"maxUnits\": \"<integer,null>\"\n    },\n    \"units\": [\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      }\n    ]\n  },\n  \"cancellable\": \"<boolean>\",\n  \"cancellation\": {\n    \"refund\": \"<string>\",\n    \"reason\": \"<null,string>\",\n    \"utcCancelledAt\": \"<string>\"\n  },\n  \"freesale\": \"<boolean>\",\n  \"availabilityId\": \"<string>\",\n  \"availability\": {\n    \"id\": \"<string>\",\n    \"localDateTimeStart\": \"<string>\",\n    \"localDateTimeEnd\": \"<string>\",\n    \"allDay\": \"<boolean>\",\n    \"openingHours\": [\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      },\n      {\n        \"from\": \"<string>\",\n        \"to\": \"<string>\"\n      }\n    ]\n  },\n  \"contact\": {\n    \"fullName\": \"<null,string>\",\n    \"firstName\": \"<null,string>\",\n    \"lastName\": \"<null,string>\",\n    \"emailAddress\": \"<null,string-email>\",\n    \"phoneNumber\": \"<null,string>\",\n    \"locales\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"postalCode\": \"<null,string>\",\n    \"country\": \"<null,string>\",\n    \"notes\": \"<null,string>\"\n  },\n  \"notes\": \"<string,null>\",\n  \"deliveryMethods\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"unitItems\": [\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    },\n    {\n      \"uuid\": \"<string>\",\n      \"resellerReference\": \"<string,null>\",\n      \"supplierReference\": \"<string,null>\",\n      \"unitId\": \"<string>\",\n      \"unit\": {\n        \"id\": \"<string>\",\n        \"internalName\": \"<string>\",\n        \"type\": \"<string>\",\n        \"requiredContactFields\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"restrictions\": {\n          \"minAge\": \"<integer>\",\n          \"maxAge\": \"<integer>\",\n          \"idRequired\": \"<boolean>\",\n          \"minQuantity\": \"<integer,null>\",\n          \"maxQuantity\": \"<null,integer>\",\n          \"paxCount\": \"<integer>\",\n          \"accompaniedBy\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        },\n        \"reference\": \"<null,string>\"\n      },\n      \"status\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"contact\": {\n        \"fullName\": \"<null,string>\",\n        \"firstName\": \"<null,string>\",\n        \"lastName\": \"<null,string>\",\n        \"emailAddress\": \"<null,string-email>\",\n        \"phoneNumber\": \"<null,string>\",\n        \"locales\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"postalCode\": \"<null,string>\",\n        \"country\": \"<null,string>\",\n        \"notes\": \"<null,string>\"\n      },\n      \"ticket\": {\n        \"redemptionMethod\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"deliveryOptions\": [\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          },\n          {\n            \"deliveryFormat\": \"<string>\",\n            \"deliveryValue\": \"<string>\"\n          }\n        ]\n      }\n    }\n  ],\n  \"voucher\": {\n    \"redemptionMethod\": \"<string>\",\n    \"utcRedeemedAt\": \"<null,string>\",\n    \"deliveryOptions\": [\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      },\n      {\n        \"deliveryFormat\": \"<string>\",\n        \"deliveryValue\": \"<string>\"\n      }\n    ]\n  }\n}"
+						},
+						{
+							"name": "Example response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Required field on all POST requests",
+										"key": "Content-Type",
+										"value": "<string>"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"unitItems\": [\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\"\n    },\n    {\n      \"unitId\": \"<string>\",\n      \"uuid\": \"<string>\"\n    }\n  ],\n  \"uuid\": \"<uuid>\",\n  \"expirationMinutes\": \"<integer>\",\n  \"notes\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/bookings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\",\n  \"productId\": \"<string>\",\n  \"optionId\": \"<string>\",\n  \"availabilityId\": \"<string>\",\n  \"unitId\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/bookings?resellerReference=<string>&supplierReference=<string>&localDate=<string>&localDateStart=<string>&localDateEnd=<string>&productId=<string>&optionId=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "resellerReference",
+									"value": "<string>",
+									"description": "The reseller reference on the booking"
+								},
+								{
+									"key": "supplierReference",
+									"value": "<string>",
+									"description": "The reference provided by the supplier"
+								},
+								{
+									"key": "localDate",
+									"value": "<string>",
+									"description": "All bookings made for a specific date"
+								},
+								{
+									"key": "localDateStart",
+									"value": "<string>",
+									"description": "First date of a date range search"
+								},
+								{
+									"key": "localDateEnd",
+									"value": "<string>",
+									"description": "Last date of a date range search"
+								},
+								{
+									"key": "productId",
+									"value": "<string>",
+									"description": "The product id to filter by"
+								},
+								{
+									"key": "optionId",
+									"value": "<string>",
+									"description": "The option id to filter by"
+								}
+							]
+						},
+						"description": "This endpoint will fetch the bookings you have made for the given filters.\n\nWhen using this endpoint you must include one of the following query parameters:\n\n- `resellerReference`\n- `supplierReference`\n- `localDate`\n- `localDateStart` and `localDateEnd`"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings?resellerReference=<string>&supplierReference=<string>&localDate=<string>&localDateStart=<string>&localDateEnd=<string>&productId=<string>&optionId=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									],
+									"query": [
+										{
+											"key": "resellerReference",
+											"value": "<string>"
+										},
+										{
+											"key": "supplierReference",
+											"value": "<string>"
+										},
+										{
+											"key": "localDate",
+											"value": "<string>"
+										},
+										{
+											"key": "localDateStart",
+											"value": "<string>"
+										},
+										{
+											"key": "localDateEnd",
+											"value": "<string>"
+										},
+										{
+											"key": "productId",
+											"value": "<string>"
+										},
+										{
+											"key": "optionId",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"uuid\": \"<uuid>\",\n    \"testMode\": \"<boolean>\",\n    \"resellerReference\": \"<string,null>\",\n    \"supplierReference\": \"<string,null>\",\n    \"status\": \"<string>\",\n    \"utcCreatedAt\": \"<string>\",\n    \"utcUpdatedAt\": \"<string,null>\",\n    \"utcExpiresAt\": \"<string,null>\",\n    \"utcRedeemedAt\": \"<string,null>\",\n    \"utcConfirmedAt\": \"<string,null>\",\n    \"productId\": \"<string>\",\n    \"product\": {\n      \"id\": \"<string>\",\n      \"internalName\": \"<string>\",\n      \"reference\": \"<null,string>\",\n      \"locale\": \"<string>\",\n      \"allowFreesale\": \"<boolean>\",\n      \"instantConfirmation\": \"<boolean>\",\n      \"instantDelivery\": \"<boolean>\",\n      \"availabilityRequired\": \"<boolean>\",\n      \"availabilityType\": \"<string>\",\n      \"deliveryFormats\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"deliveryMethods\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"redemptionMethod\": \"<string>\",\n      \"options\": [\n        {\n          \"id\": \"<string>\",\n          \"default\": \"<boolean>\",\n          \"internalName\": \"<string>\",\n          \"reference\": \"<null,string>\",\n          \"availabilityLocalStartTimes\": [\n            \"00:00\",\n            \"00:00\"\n          ],\n          \"cancellationCutoff\": \"<string>\",\n          \"cancellationCutoffAmount\": \"<integer>\",\n          \"cancellationCutoffUnit\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minUnits\": \"<integer,null>\",\n            \"maxUnits\": \"<integer,null>\"\n          },\n          \"units\": [\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            }\n          ]\n        },\n        {\n          \"id\": \"<string>\",\n          \"default\": \"<boolean>\",\n          \"internalName\": \"<string>\",\n          \"reference\": \"<null,string>\",\n          \"availabilityLocalStartTimes\": [\n            \"00:00\",\n            \"00:00\"\n          ],\n          \"cancellationCutoff\": \"<string>\",\n          \"cancellationCutoffAmount\": \"<integer>\",\n          \"cancellationCutoffUnit\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minUnits\": \"<integer,null>\",\n            \"maxUnits\": \"<integer,null>\"\n          },\n          \"units\": [\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            }\n          ]\n        }\n      ],\n      \"timeZone\": \"<string>\"\n    },\n    \"optionId\": \"<string>\",\n    \"option\": {\n      \"id\": \"<string>\",\n      \"default\": \"<boolean>\",\n      \"internalName\": \"<string>\",\n      \"reference\": \"<null,string>\",\n      \"availabilityLocalStartTimes\": [\n        \"00:00\",\n        \"00:00\"\n      ],\n      \"cancellationCutoff\": \"<string>\",\n      \"cancellationCutoffAmount\": \"<integer>\",\n      \"cancellationCutoffUnit\": \"<string>\",\n      \"requiredContactFields\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"restrictions\": {\n        \"minUnits\": \"<integer,null>\",\n        \"maxUnits\": \"<integer,null>\"\n      },\n      \"units\": [\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        }\n      ]\n    },\n    \"cancellable\": \"<boolean>\",\n    \"cancellation\": {\n      \"refund\": \"<string>\",\n      \"reason\": \"<null,string>\",\n      \"utcCancelledAt\": \"<string>\"\n    },\n    \"freesale\": \"<boolean>\",\n    \"availabilityId\": \"<string>\",\n    \"availability\": {\n      \"id\": \"<string>\",\n      \"localDateTimeStart\": \"<string>\",\n      \"localDateTimeEnd\": \"<string>\",\n      \"allDay\": \"<boolean>\",\n      \"openingHours\": [\n        {\n          \"from\": \"<string>\",\n          \"to\": \"<string>\"\n        },\n        {\n          \"from\": \"<string>\",\n          \"to\": \"<string>\"\n        }\n      ]\n    },\n    \"contact\": {\n      \"fullName\": \"<null,string>\",\n      \"firstName\": \"<null,string>\",\n      \"lastName\": \"<null,string>\",\n      \"emailAddress\": \"<null,string-email>\",\n      \"phoneNumber\": \"<null,string>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"postalCode\": \"<null,string>\",\n      \"country\": \"<null,string>\",\n      \"notes\": \"<null,string>\"\n    },\n    \"notes\": \"<string,null>\",\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"unitItems\": [\n      {\n        \"uuid\": \"<string>\",\n        \"resellerReference\": \"<string,null>\",\n        \"supplierReference\": \"<string,null>\",\n        \"unitId\": \"<string>\",\n        \"unit\": {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        \"status\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"contact\": {\n          \"fullName\": \"<null,string>\",\n          \"firstName\": \"<null,string>\",\n          \"lastName\": \"<null,string>\",\n          \"emailAddress\": \"<null,string-email>\",\n          \"phoneNumber\": \"<null,string>\",\n          \"locales\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"postalCode\": \"<null,string>\",\n          \"country\": \"<null,string>\",\n          \"notes\": \"<null,string>\"\n        },\n        \"ticket\": {\n          \"redemptionMethod\": \"<string>\",\n          \"utcRedeemedAt\": \"<null,string>\",\n          \"deliveryOptions\": [\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            },\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            }\n          ]\n        }\n      },\n      {\n        \"uuid\": \"<string>\",\n        \"resellerReference\": \"<string,null>\",\n        \"supplierReference\": \"<string,null>\",\n        \"unitId\": \"<string>\",\n        \"unit\": {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        \"status\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"contact\": {\n          \"fullName\": \"<null,string>\",\n          \"firstName\": \"<null,string>\",\n          \"lastName\": \"<null,string>\",\n          \"emailAddress\": \"<null,string-email>\",\n          \"phoneNumber\": \"<null,string>\",\n          \"locales\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"postalCode\": \"<null,string>\",\n          \"country\": \"<null,string>\",\n          \"notes\": \"<null,string>\"\n        },\n        \"ticket\": {\n          \"redemptionMethod\": \"<string>\",\n          \"utcRedeemedAt\": \"<null,string>\",\n          \"deliveryOptions\": [\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            },\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"voucher\": {\n      \"redemptionMethod\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"deliveryOptions\": [\n        {\n          \"deliveryFormat\": \"<string>\",\n          \"deliveryValue\": \"<string>\"\n        },\n        {\n          \"deliveryFormat\": \"<string>\",\n          \"deliveryValue\": \"<string>\"\n        }\n      ]\n    }\n  },\n  {\n    \"id\": \"<string>\",\n    \"uuid\": \"<uuid>\",\n    \"testMode\": \"<boolean>\",\n    \"resellerReference\": \"<string,null>\",\n    \"supplierReference\": \"<string,null>\",\n    \"status\": \"<string>\",\n    \"utcCreatedAt\": \"<string>\",\n    \"utcUpdatedAt\": \"<string,null>\",\n    \"utcExpiresAt\": \"<string,null>\",\n    \"utcRedeemedAt\": \"<string,null>\",\n    \"utcConfirmedAt\": \"<string,null>\",\n    \"productId\": \"<string>\",\n    \"product\": {\n      \"id\": \"<string>\",\n      \"internalName\": \"<string>\",\n      \"reference\": \"<null,string>\",\n      \"locale\": \"<string>\",\n      \"allowFreesale\": \"<boolean>\",\n      \"instantConfirmation\": \"<boolean>\",\n      \"instantDelivery\": \"<boolean>\",\n      \"availabilityRequired\": \"<boolean>\",\n      \"availabilityType\": \"<string>\",\n      \"deliveryFormats\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"deliveryMethods\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"redemptionMethod\": \"<string>\",\n      \"options\": [\n        {\n          \"id\": \"<string>\",\n          \"default\": \"<boolean>\",\n          \"internalName\": \"<string>\",\n          \"reference\": \"<null,string>\",\n          \"availabilityLocalStartTimes\": [\n            \"00:00\",\n            \"00:00\"\n          ],\n          \"cancellationCutoff\": \"<string>\",\n          \"cancellationCutoffAmount\": \"<integer>\",\n          \"cancellationCutoffUnit\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minUnits\": \"<integer,null>\",\n            \"maxUnits\": \"<integer,null>\"\n          },\n          \"units\": [\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            }\n          ]\n        },\n        {\n          \"id\": \"<string>\",\n          \"default\": \"<boolean>\",\n          \"internalName\": \"<string>\",\n          \"reference\": \"<null,string>\",\n          \"availabilityLocalStartTimes\": [\n            \"00:00\",\n            \"00:00\"\n          ],\n          \"cancellationCutoff\": \"<string>\",\n          \"cancellationCutoffAmount\": \"<integer>\",\n          \"cancellationCutoffUnit\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minUnits\": \"<integer,null>\",\n            \"maxUnits\": \"<integer,null>\"\n          },\n          \"units\": [\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            },\n            {\n              \"id\": \"<string>\",\n              \"internalName\": \"<string>\",\n              \"type\": \"<string>\",\n              \"requiredContactFields\": [\n                \"<string>\",\n                \"<string>\"\n              ],\n              \"restrictions\": {\n                \"minAge\": \"<integer>\",\n                \"maxAge\": \"<integer>\",\n                \"idRequired\": \"<boolean>\",\n                \"minQuantity\": \"<integer,null>\",\n                \"maxQuantity\": \"<null,integer>\",\n                \"paxCount\": \"<integer>\",\n                \"accompaniedBy\": [\n                  \"<string>\",\n                  \"<string>\"\n                ]\n              },\n              \"reference\": \"<null,string>\"\n            }\n          ]\n        }\n      ],\n      \"timeZone\": \"<string>\"\n    },\n    \"optionId\": \"<string>\",\n    \"option\": {\n      \"id\": \"<string>\",\n      \"default\": \"<boolean>\",\n      \"internalName\": \"<string>\",\n      \"reference\": \"<null,string>\",\n      \"availabilityLocalStartTimes\": [\n        \"00:00\",\n        \"00:00\"\n      ],\n      \"cancellationCutoff\": \"<string>\",\n      \"cancellationCutoffAmount\": \"<integer>\",\n      \"cancellationCutoffUnit\": \"<string>\",\n      \"requiredContactFields\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"restrictions\": {\n        \"minUnits\": \"<integer,null>\",\n        \"maxUnits\": \"<integer,null>\"\n      },\n      \"units\": [\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        }\n      ]\n    },\n    \"cancellable\": \"<boolean>\",\n    \"cancellation\": {\n      \"refund\": \"<string>\",\n      \"reason\": \"<null,string>\",\n      \"utcCancelledAt\": \"<string>\"\n    },\n    \"freesale\": \"<boolean>\",\n    \"availabilityId\": \"<string>\",\n    \"availability\": {\n      \"id\": \"<string>\",\n      \"localDateTimeStart\": \"<string>\",\n      \"localDateTimeEnd\": \"<string>\",\n      \"allDay\": \"<boolean>\",\n      \"openingHours\": [\n        {\n          \"from\": \"<string>\",\n          \"to\": \"<string>\"\n        },\n        {\n          \"from\": \"<string>\",\n          \"to\": \"<string>\"\n        }\n      ]\n    },\n    \"contact\": {\n      \"fullName\": \"<null,string>\",\n      \"firstName\": \"<null,string>\",\n      \"lastName\": \"<null,string>\",\n      \"emailAddress\": \"<null,string-email>\",\n      \"phoneNumber\": \"<null,string>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"postalCode\": \"<null,string>\",\n      \"country\": \"<null,string>\",\n      \"notes\": \"<null,string>\"\n    },\n    \"notes\": \"<string,null>\",\n    \"deliveryMethods\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"unitItems\": [\n      {\n        \"uuid\": \"<string>\",\n        \"resellerReference\": \"<string,null>\",\n        \"supplierReference\": \"<string,null>\",\n        \"unitId\": \"<string>\",\n        \"unit\": {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        \"status\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"contact\": {\n          \"fullName\": \"<null,string>\",\n          \"firstName\": \"<null,string>\",\n          \"lastName\": \"<null,string>\",\n          \"emailAddress\": \"<null,string-email>\",\n          \"phoneNumber\": \"<null,string>\",\n          \"locales\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"postalCode\": \"<null,string>\",\n          \"country\": \"<null,string>\",\n          \"notes\": \"<null,string>\"\n        },\n        \"ticket\": {\n          \"redemptionMethod\": \"<string>\",\n          \"utcRedeemedAt\": \"<null,string>\",\n          \"deliveryOptions\": [\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            },\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            }\n          ]\n        }\n      },\n      {\n        \"uuid\": \"<string>\",\n        \"resellerReference\": \"<string,null>\",\n        \"supplierReference\": \"<string,null>\",\n        \"unitId\": \"<string>\",\n        \"unit\": {\n          \"id\": \"<string>\",\n          \"internalName\": \"<string>\",\n          \"type\": \"<string>\",\n          \"requiredContactFields\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"restrictions\": {\n            \"minAge\": \"<integer>\",\n            \"maxAge\": \"<integer>\",\n            \"idRequired\": \"<boolean>\",\n            \"minQuantity\": \"<integer,null>\",\n            \"maxQuantity\": \"<null,integer>\",\n            \"paxCount\": \"<integer>\",\n            \"accompaniedBy\": [\n              \"<string>\",\n              \"<string>\"\n            ]\n          },\n          \"reference\": \"<null,string>\"\n        },\n        \"status\": \"<string>\",\n        \"utcRedeemedAt\": \"<null,string>\",\n        \"contact\": {\n          \"fullName\": \"<null,string>\",\n          \"firstName\": \"<null,string>\",\n          \"lastName\": \"<null,string>\",\n          \"emailAddress\": \"<null,string-email>\",\n          \"phoneNumber\": \"<null,string>\",\n          \"locales\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"postalCode\": \"<null,string>\",\n          \"country\": \"<null,string>\",\n          \"notes\": \"<null,string>\"\n        },\n        \"ticket\": {\n          \"redemptionMethod\": \"<string>\",\n          \"utcRedeemedAt\": \"<null,string>\",\n          \"deliveryOptions\": [\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            },\n            {\n              \"deliveryFormat\": \"<string>\",\n              \"deliveryValue\": \"<string>\"\n            }\n          ]\n        }\n      }\n    ],\n    \"voucher\": {\n      \"redemptionMethod\": \"<string>\",\n      \"utcRedeemedAt\": \"<null,string>\",\n      \"deliveryOptions\": [\n        {\n          \"deliveryFormat\": \"<string>\",\n          \"deliveryValue\": \"<string>\"\n        },\n        {\n          \"deliveryFormat\": \"<string>\",\n          \"deliveryValue\": \"<string>\"\n        }\n      ]\n    }\n  }\n]"
+						},
+						{
+							"name": "Example response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/bookings?resellerReference=<string>&supplierReference=<string>&localDate=<string>&localDateStart=<string>&localDateEnd=<string>&productId=<string>&optionId=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"bookings"
+									],
+									"query": [
+										{
+											"key": "resellerReference",
+											"value": "<string>"
+										},
+										{
+											"key": "supplierReference",
+											"value": "<string>"
+										},
+										{
+											"key": "localDate",
+											"value": "<string>"
+										},
+										{
+											"key": "localDateStart",
+											"value": "<string>"
+										},
+										{
+											"key": "localDateEnd",
+											"value": "<string>"
+										},
+										{
+											"key": "productId",
+											"value": "<string>"
+										},
+										{
+											"key": "optionId",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"error\": \"<string>\",\n  \"errorMessage\": \"<string>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Supplier",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/supplier",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"supplier"
+					]
+				},
+				"description": "Returns the supplier and associated contact details."
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/supplier",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"supplier"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"endpoint\": \"<uri>\",\n  \"contact\": {\n    \"website\": \"<null,string-uri>\",\n    \"email\": \"<null,string-email>\",\n    \"telephone\": \"<null,string>\",\n    \"address\": \"<null,string>\"\n  }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.example.com/octo",
+			"type": "string"
+		}
+	]
+}
